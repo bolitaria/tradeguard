@@ -1,8 +1,5 @@
 # TradeGuard – AI-Assisted Trading Controls Microservice
 
-[![Build](https://github.com/tu-usuario/tradeguard/actions/workflows/build.yml/badge.svg)](https://github.com/tu-usuario/tradeguard/actions/workflows/build.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tradeguard&metric=alert_status)](https://sonarcloud.io/dashboard?id=tradeguard)
-
 **TradeGuard** es un microservicio Spring Boot que valida órdenes bursátiles aplicando reglas de riesgo y compliance. Este proyecto demuestra un flujo completo de **AI-Assisted Code Analysis & Refactoring**, elevando código legacy vulnerable a un estándar enterprise seguro y mantenible, utilizando herramientas gratuitas de IA como **Codeium**.
 
 ## 🎯 Objetivo
