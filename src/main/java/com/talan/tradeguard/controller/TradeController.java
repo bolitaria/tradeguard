@@ -1,0 +1,44 @@
+package com.talan.tradeguard.controller;
+
+import com.talan.tradeguard.dto.TradeRequest;
+import com.talan.tradeguard.dto.TradeResponse;
+import com.talan.tradeguard.model.TradeOrder;
+import com.talan.tradeguard.repository.TradeOrderRepository;
+import com.talan.tradeguard.service.TradeValidationService;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@RestController
+@RequestMapping("/api/trades")
+public class TradeController {
+
+    private final TradeValidationService validationService;
+    private final TradeOrderRepository repository;
+
+    public TradeController(TradeValidationService validationService, TradeOrderRepository repository) {
+        this.validationService = validationService;
+        this.repository = repository;
+    }
+
+    @PostMapping
+    public ResponseEntity<TradeResponse> validateTrade(@Valid @RequestBody TradeRequest request) {
+        TradeResponse response = validationService.validateAndSave(request);
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/history/{trader}")
+    public ResponseEntity<List<TradeResponse>> getHistory(@PathVariable String trader) {
+        List<TradeOrder> orders = repository.findByTraderName(trader);
+        List<TradeResponse> responses = orders.stream().map(order ->
+                new TradeResponse(
+                        order.getId(), order.getSymbol(), order.getQuantity(),
+                        order.getPrice(), order.getTraderName(), order.getStatus(),
+                        order.getRejectReason()
+                )).collect(Collectors.toList());
+        return ResponseEntity.ok(responses);
+    }
+}
