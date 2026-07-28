@@ -7,6 +7,8 @@ import com.tradeguard.repository.TradeOrderRepository;
 import com.tradeguard.service.TradeValidationService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,15 +31,17 @@ public class TradeController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/history/{trader}")
-    public ResponseEntity<List<TradeResponse>> getHistory(@PathVariable String trader) {
+    @GetMapping("/history")
+    public ResponseEntity<List<TradeResponse>> getHistory() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String trader = authentication.getName();  // usuario del JWT
         List<TradeOrder> orders = repository.findByTraderName(trader);
         List<TradeResponse> responses = orders.stream().map(order ->
                 new TradeResponse(
                         order.getId(), order.getSymbol(), order.getQuantity(),
                         order.getPrice(), order.getTraderName(), order.getStatus(),
                         order.getRejectReason()
-                )).toList();   // <-- Cambio aquí: .toList() en lugar de .collect(Collectors.toList())
+                )).toList();
         return ResponseEntity.ok(responses);
     }
 }

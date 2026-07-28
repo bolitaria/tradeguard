@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
-@AutoConfigureMockMvc(addFilters = false)   // desactiva filtros para test
+@AutoConfigureMockMvc(addFilters = false)   // desactiva filtros de seguridad en test
 class TradeControllerTest {
 
     @Autowired
