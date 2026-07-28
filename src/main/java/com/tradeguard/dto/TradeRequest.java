@@ -1,4 +1,4 @@
-package com.talan.tradeguard.dto;
+package com.tradeguard.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;

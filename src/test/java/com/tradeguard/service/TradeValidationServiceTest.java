@@ -1,9 +1,9 @@
-package com.talan.tradeguard.service;
+package com.tradeguard.service;
 
-import com.talan.tradeguard.dto.TradeRequest;
-import com.talan.tradeguard.dto.TradeResponse;
-import com.talan.tradeguard.model.TradeOrder;
-import com.talan.tradeguard.repository.TradeOrderRepository;
+import com.tradeguard.dto.TradeRequest;
+import com.tradeguard.dto.TradeResponse;
+import com.tradeguard.model.TradeOrder;
+import com.tradeguard.repository.TradeOrderRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

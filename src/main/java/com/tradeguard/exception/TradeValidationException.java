@@ -1,4 +1,4 @@
-package com.talan.tradeguard.exception;
+package com.tradeguard.exception;
 
 public class TradeValidationException extends RuntimeException {
     private final String reason;

@@ -1,4 +1,4 @@
-package com.talan.tradeguard.config;
+package com.tradeguard.config;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;

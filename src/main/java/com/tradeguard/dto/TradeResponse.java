@@ -1,4 +1,4 @@
-package com.talan.tradeguard.dto;
+package com.tradeguard.dto;
 
 public class TradeResponse {
     private Long id;

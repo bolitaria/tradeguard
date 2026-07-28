@@ -1,10 +1,10 @@
-package com.talan.tradeguard.controller;
+package com.tradeguard.controller;
 
-import com.talan.tradeguard.dto.TradeRequest;
-import com.talan.tradeguard.dto.TradeResponse;
-import com.talan.tradeguard.model.TradeOrder;
-import com.talan.tradeguard.repository.TradeOrderRepository;
-import com.talan.tradeguard.service.TradeValidationService;
+import com.tradeguard.dto.TradeRequest;
+import com.tradeguard.dto.TradeResponse;
+import com.tradeguard.model.TradeOrder;
+import com.tradeguard.repository.TradeOrderRepository;
+import com.tradeguard.service.TradeValidationService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

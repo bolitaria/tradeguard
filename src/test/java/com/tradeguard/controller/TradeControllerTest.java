@@ -1,8 +1,8 @@
-package com.talan.tradeguard.controller;
+package com.tradeguard.controller;
 
-import com.talan.tradeguard.dto.TradeRequest;
-import com.talan.tradeguard.dto.TradeResponse;
-import com.talan.tradeguard.service.TradeValidationService;
+import com.tradeguard.dto.TradeRequest;
+import com.tradeguard.dto.TradeResponse;
+import com.tradeguard.service.TradeValidationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

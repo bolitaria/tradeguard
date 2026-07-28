@@ -1,6 +1,6 @@
-package com.talan.tradeguard.exception;
+package com.tradeguard.exception;
 
-import com.talan.tradeguard.dto.ErrorResponse;
+import com.tradeguard.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

@@ -1,4 +1,4 @@
-package com.talan.tradeguard.model;
+package com.tradeguard.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

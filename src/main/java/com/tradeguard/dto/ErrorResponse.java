@@ -1,4 +1,4 @@
-package com.talan.tradeguard.dto;
+package com.tradeguard.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;

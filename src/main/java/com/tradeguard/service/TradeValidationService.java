@@ -1,10 +1,10 @@
-package com.talan.tradeguard.service;
+package com.tradeguard.service;
 
-import com.talan.tradeguard.dto.TradeRequest;
-import com.talan.tradeguard.dto.TradeResponse;
-import com.talan.tradeguard.exception.TradeValidationException;
-import com.talan.tradeguard.model.TradeOrder;
-import com.talan.tradeguard.repository.TradeOrderRepository;
+import com.tradeguard.dto.TradeRequest;
+import com.tradeguard.dto.TradeResponse;
+import com.tradeguard.exception.TradeValidationException;
+import com.tradeguard.model.TradeOrder;
+import com.tradeguard.repository.TradeOrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
