@@ -2,6 +2,7 @@ package com.talan.tradeguard.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 public class ErrorResponse {
@@ -13,7 +14,7 @@ public class ErrorResponse {
     private List<String> messages;
 
     public ErrorResponse(int status, String error, List<String> messages) {
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = LocalDateTime.now(ZoneId.of("UTC"));   // <-- Cambio aquí: zona horaria explícita
         this.status = status;
         this.error = error;
         this.messages = messages;

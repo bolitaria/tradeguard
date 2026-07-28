@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/trades")
@@ -38,7 +37,7 @@ public class TradeController {
                         order.getId(), order.getSymbol(), order.getQuantity(),
                         order.getPrice(), order.getTraderName(), order.getStatus(),
                         order.getRejectReason()
-                )).collect(Collectors.toList());
+                )).toList();   // <-- Cambio aquí: .toList() en lugar de .collect(Collectors.toList())
         return ResponseEntity.ok(responses);
     }
 }
