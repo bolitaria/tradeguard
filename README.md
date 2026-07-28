@@ -71,3 +71,4 @@ El badge en este README refleja el estado actual.
 git clone https://github.com/tu-usuario/tradeguard.git
 cd tradeguard
 mvn spring-boot:run
+
